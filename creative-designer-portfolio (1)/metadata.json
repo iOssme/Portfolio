@@ -1,0 +1,8 @@
+{
+  "name": "Creative Designer Portfolio",
+  "description": "Minimalist, editorial, high-contrast personal portfolio website.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

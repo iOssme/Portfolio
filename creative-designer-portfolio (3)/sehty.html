@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aser Ahmed Khaled - Portfolio</title>
+  <meta name="description" content="Portfolio of Aser Ahmed Khaled, Engineering student, UI/UX Designer, and Project Coordinator based in Cairo.">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config to match original brutalist/minimalist theme -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: {
+              primary: 'var(--bg-primary)',
+            },
+            fg: {
+              primary: 'var(--fg-primary)',
+            },
+            border: {
+              subtle: 'var(--border-subtle)',
+            }
+          },
+          fontFamily: {
+            sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-primary: #F2F0E9; /* Warm off-white */
+      --fg-primary: #1A1A1A; /* Soft black */
+      --border-subtle: rgba(26, 26, 26, 0.1);
+    }
+    
+    .dark {
+      --bg-primary: #111111;
+      --fg-primary: #EDEDED;
+      --border-subtle: rgba(237, 237, 237, 0.1);
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--fg-primary);
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-subtle);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(128, 128, 128, 0.5);
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-fg-primary selection:text-bg-primary">
+
+  <!-- Navigation -->
+  
+<nav class="fixed top-0 left-0 w-full z-50 bg-[var(--bg-primary)]/90 backdrop-blur-sm border-b border-border-subtle py-6 px-6 md:px-12 flex justify-between items-center text-[11px] tracking-[0.2em] font-medium uppercase transition-colors duration-500">
+    <a href="./index.html#home" class="text-xl font-bold tracking-tighter hover:opacity-70 transition-opacity flex items-center gap-1">
+      ASER KHALED<span class="opacity-50 text-sm">®</span>
+    </a>
+    
+    <div class="flex gap-6 md:gap-8 items-center">
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="./index.html#work" class="opacity-50 hover:opacity-100 transition-opacity">Work</a>
+        <a href="./index.html#about" class="opacity-50 hover:opacity-100 transition-opacity">About</a>
+        <a href="./index.html#contact" class="opacity-50 hover:opacity-100 transition-opacity">Contact</a>
+      </div>
+      
+      <div class="flex items-center gap-6">
+        <button id="theme-toggle" class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer flex items-center justify-center" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+        </button>
+        
+        <div class="flex items-center gap-2">
+          <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="hidden sm:inline-block">Available</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-grow pt-24">
+    <article class="w-full">
+      <header class="px-6 md:px-12 pt-24 md:pt-32 pb-16">
+        <div class="flex items-center gap-4 text-[10px] tracking-[0.3em] opacity-40 uppercase mb-8">
+          <a href="./index.html#work" class="hover:opacity-100 transition-opacity">Work</a>
+          <span>/</span>
+          <span>Sehty (صحتي)</span>
+        </div>
+        <h1 class="text-5xl md:text-[80px] lg:text-[120px] font-black tracking-tighter uppercase leading-[0.85] mb-8">
+          Sehty (صحتي)
+        </h1>
+        <p class="text-xl md:text-2xl font-light italic opacity-80 max-w-4xl mb-16">
+          AI-powered personal health record management platform
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-border-subtle">
+          <div>
+            <span class="block text-[10px] tracking-[0.3em] opacity-40 uppercase mb-2">Role</span>
+            <span class="text-sm font-light">UI/UX Designer</span>
+          </div>
+          <div>
+            <span class="block text-[10px] tracking-[0.3em] opacity-40 uppercase mb-2">Client</span>
+            <span class="text-sm font-light italic">Sehty Health Tech</span>
+          </div>
+          <div>
+            <span class="block text-[10px] tracking-[0.3em] opacity-40 uppercase mb-2">Timeline</span>
+            <span class="text-sm font-light">6 Weeks</span>
+          </div>
+          <div>
+            <span class="block text-[10px] tracking-[0.3em] opacity-40 uppercase mb-2">Tools</span>
+            <span class="text-sm font-light">Figma, React</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="w-full h-[50vh] md:h-[80vh] overflow-hidden p-4 md:p-12 bg-border-subtle border-y border-border-subtle">
+        <img src="./assets/Sehty/1788283983484.png" alt="Sehty (صحتي)" class="w-full h-full object-contain rounded-xl shadow-2xl">
+      </div>
+
+      <section class="px-6 md:px-12 py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-border-subtle">
+        <div class="md:col-span-4">
+          <h2 class="text-[10px] tracking-[0.3em] opacity-40 uppercase">Narrative</h2>
+        </div>
+        <div class="md:col-span-8 flex flex-col gap-8">
+          <p class="text-2xl md:text-4xl leading-[1.3] font-light">
+            Building an intuitive, secure platform for patients to store, manage, and understand their health records using AI.
+          </p>
+          <p class="text-lg md:text-xl font-light opacity-70 max-w-3xl leading-relaxed">
+            Ensuring HIPAA-compliant data handling while maintaining a user-friendly, accessible interface for all age groups.
+          </p>
+        </div>
+      </section>
+
+      <!-- Interactive Color Palette -->
+      <section class="px-6 md:px-12 py-24 md:py-32 border-b border-border-subtle">
+        <h3 class="text-[10px] tracking-[0.3em] opacity-40 uppercase mb-8">Interactive System Swatches</h3>
+        <div class="flex flex-col sm:flex-row gap-2 h-auto sm:h-32">
+          <div class="flex-1 flex items-end p-4 group hover:flex-[2] transition-all cursor-crosshair min-h-[100px]" style="background-color: #0A5C5A;">
+            <div class="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-[10px] font-bold uppercase mb-1" style="color: #ffffff;">Deep Medical Teal</span>
+              <span class="text-[9px] tracking-widest" style="color: #ffffff;">#0A5C5A</span>
+            </div>
+          </div>
+          <div class="flex-1 flex items-end p-4 group hover:flex-[2] transition-all cursor-crosshair min-h-[100px]" style="background-color: #14918E;">
+            <div class="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-[10px] font-bold uppercase mb-1" style="color: #ffffff;">Vibrant Aqua</span>
+              <span class="text-[9px] tracking-widest" style="color: #ffffff;">#14918E</span>
+            </div>
+          </div>
+          <div class="flex-1 flex items-end p-4 group hover:flex-[2] transition-all cursor-crosshair min-h-[100px]" style="background-color: #E8F6F6;">
+            <div class="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-[10px] font-bold uppercase mb-1" style="color: #000000;">Clinical White</span>
+              <span class="text-[9px] tracking-widest" style="color: #000000;">#E8F6F6</span>
+            </div>
+          </div>
+          <div class="flex-1 flex items-end p-4 group hover:flex-[2] transition-all cursor-crosshair min-h-[100px]" style="background-color: #64748B;">
+            <div class="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-[10px] font-bold uppercase mb-1" style="color: #ffffff;">Cool Gray</span>
+              <span class="text-[9px] tracking-widest" style="color: #ffffff;">#64748B</span>
+            </div>
+          </div>
+          <div class="flex-1 flex items-end p-4 group hover:flex-[2] transition-all cursor-crosshair min-h-[100px]" style="background-color: #1A202C;">
+            <div class="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-[10px] font-bold uppercase mb-1" style="color: #ffffff;">Charcoal Slate</span>
+              <span class="text-[9px] tracking-widest" style="color: #ffffff;">#1A202C</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 md:py-32 border-b border-border-subtle">
+        <div class="px-6 md:px-12 mb-16">
+          <h3 class="text-[10px] tracking-[0.3em] opacity-40 uppercase mb-6">Platform Showcase</h3>
+        </div>
+        <div class="flex flex-col gap-24">
+          <div class="w-full">
+            <div class="w-full h-[60vh] md:h-[80vh] overflow-hidden border-y border-border-subtle p-4 md:p-12 bg-border-subtle">
+              <img src="./assets/Sehty/1788283983484.png" class="w-full h-full object-contain rounded-xl shadow-2xl">
+            </div>
+            <div class="px-6 md:px-12 pt-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+              <h4 class="md:col-span-4 text-[10px] tracking-[0.3em] opacity-40 uppercase">Main Dashboard</h4>
+              <p class="md:col-span-8 font-light opacity-70 text-lg leading-relaxed">Clean, accessible dashboard providing a centralized vault for medical records, lab results, and AI-driven health insights.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+
+      <div class="px-6 md:px-12 py-24 border-b border-border-subtle">
+        <a href="./index.html#work" class="inline-flex items-center gap-3 px-8 py-4 border border-current hover:bg-fg-primary hover:text-bg-primary rounded-full uppercase tracking-[0.2em] text-[10px] font-bold transition-colors duration-500">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Projects
+        </a>
+      </div>
+    </article>
+  </main>
+<footer id="contact" class="w-full transition-colors duration-500">
+    <div class="px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-border-subtle">
+      <div>
+        <h2 class="text-5xl md:text-[80px] font-black tracking-tighter mb-4 uppercase leading-[0.85]">Let's Talk</h2>
+        <a href="mailto:aserahmad2586@gmail.com" class="text-xl md:text-2xl opacity-70 font-light hover:opacity-100 transition-opacity duration-300 block w-max italic">
+          aserahmad2586@gmail.com
+        </a>
+      </div>
+    </div>
+    
+    <div class="px-6 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] tracking-widest opacity-40 uppercase">
+      <div>© 2026 ASER AHMED KHALED — Built for Creative Excellence</div>
+      <div class="flex gap-8">
+        <a href="https://www.linkedin.com/in/aser-ahmed-khaled/" target="_blank" rel="noopener noreferrer" class="hover:opacity-100 transition-opacity">LinkedIn</a>
+        <a href="https://www.behance.net/aserahmed23" target="_blank" rel="noopener noreferrer" class="hover:opacity-100 transition-opacity">Behance</a>
+        <a href="https://github.com/iOssme" target="_blank" rel="noopener noreferrer" class="hover:opacity-100 transition-opacity">GitHub</a>
+      </div>
+      <div>
+        <span id="local-time"></span> (UTC)
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Dark Mode Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Check system preference or localStorage
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      htmlElement.classList.add('dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      htmlElement.classList.toggle('dark');
+      const isDark = htmlElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Local Time Clock Logic
+    const timeElement = document.getElementById('local-time');
+    function updateClock() {
+      const now = new Date();
+      timeElement.textContent = `Local Time: ${now.toLocaleTimeString('en-US', { 
+        hour12: false, 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+      })}`;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>

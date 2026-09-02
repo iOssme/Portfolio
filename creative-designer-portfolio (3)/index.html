@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aser Ahmed Khaled - Portfolio</title>
+  <meta name="description" content="Portfolio of Aser Ahmed Khaled, Engineering student, UI/UX Designer, and Project Coordinator based in Cairo.">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config to match original brutalist/minimalist theme -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: {
+              primary: 'var(--bg-primary)',
+            },
+            fg: {
+              primary: 'var(--fg-primary)',
+            },
+            border: {
+              subtle: 'var(--border-subtle)',
+            }
+          },
+          fontFamily: {
+            sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-primary: #F2F0E9; /* Warm off-white */
+      --fg-primary: #1A1A1A; /* Soft black */
+      --border-subtle: rgba(26, 26, 26, 0.1);
+    }
+    
+    .dark {
+      --bg-primary: #111111;
+      --fg-primary: #EDEDED;
+      --border-subtle: rgba(237, 237, 237, 0.1);
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--fg-primary);
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-subtle);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(128, 128, 128, 0.5);
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-fg-primary selection:text-bg-primary">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-[var(--bg-primary)]/90 backdrop-blur-sm border-b border-border-subtle py-6 px-6 md:px-12 flex justify-between items-center text-[11px] tracking-[0.2em] font-medium uppercase transition-colors duration-500">
+    <a href="#home" class="text-xl font-bold tracking-tighter hover:opacity-70 transition-opacity flex items-center gap-1">
+      ASER KHALED<span class="opacity-50 text-sm">®</span>
+    </a>
+    
+    <div class="flex gap-6 md:gap-8 items-center">
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#work" class="opacity-50 hover:opacity-100 transition-opacity">Work</a>
+        <a href="#about" class="opacity-50 hover:opacity-100 transition-opacity">About</a>
+        <a href="#contact" class="opacity-50 hover:opacity-100 transition-opacity">Contact</a>
+      </div>
+      
+      <div class="flex items-center gap-6">
+        <button id="theme-toggle" class="opacity-50 hover:opacity-100 transition-opacity cursor-pointer flex items-center justify-center" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+        </button>
+        
+        <div class="flex items-center gap-2">
+          <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="hidden sm:inline-block">Available</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-24">
+    
+    <!-- Hero Section -->
+    <section id="home" class="px-6 md:px-12 pt-16 md:pt-32 pb-24 border-b border-border-subtle">
+      <h1 class="text-5xl md:text-[80px] lg:text-[120px] font-black tracking-tighter uppercase leading-[0.85] max-w-6xl">
+        Brand Identity, <br>
+        <span class="opacity-40">UI/UX Design &</span> <br>
+        Creative Technology.
+      </h1>
+    </section>
+
+    <!-- Work / Projects Section -->
+    <section id="work" class="w-full border-b border-border-subtle">
+      
+      <!-- Project 1 -->
+      <article class="group block border-b border-border-subtle relative hover:bg-fg-primary hover:text-bg-primary transition-colors duration-500">
+        <div class="px-6 md:px-12 py-12 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+          <div class="md:col-span-8 flex flex-col gap-4">
+            <div class="flex items-center gap-4 text-[10px] tracking-[0.3em] opacity-40 uppercase">
+              <span>01</span>
+              <span>Brand Identity, UI/UX</span>
+              <span>2026</span>
+            </div>
+            <h2 class="text-4xl md:text-[60px] font-black tracking-tighter uppercase leading-none">
+              REWOODEX
+            </h2>
+            <p class="text-lg md:text-xl font-light italic opacity-80 max-w-2xl mt-2">
+              Handcrafted Wood & Resin Art E-Commerce & Brand Identity
+            </p>
+            <div class="mt-4 flex flex-wrap gap-4">
+              <a href="./rewoodex.html" class="inline-flex items-center gap-3 px-6 py-3 bg-fg-primary text-bg-primary rounded-full uppercase tracking-[0.2em] text-[10px] font-bold hover:scale-105 transition-transform duration-300">
+                View Case Study <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="https://rewoodex-803617416419.europe-west2.run.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 border border-current rounded-full uppercase tracking-[0.2em] text-[10px] font-bold hover:scale-105 transition-transform duration-300">
+                Live Demo <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-4 h-64 md:h-80 overflow-hidden w-full rounded-xl">
+            <img src="./assets/1788291998434.png" alt="REWOODEX" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700">
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="group block border-b border-border-subtle relative hover:bg-fg-primary hover:text-bg-primary transition-colors duration-500">
+        <div class="px-6 md:px-12 py-12 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+          <div class="md:col-span-8 flex flex-col gap-4">
+            <div class="flex items-center gap-4 text-[10px] tracking-[0.3em] opacity-40 uppercase">
+              <span>02</span>
+              <span>Digital Health, UI/UX</span>
+              <span>2026</span>
+            </div>
+            <h2 class="text-4xl md:text-[60px] font-black tracking-tighter uppercase leading-none">
+              Sehty
+            </h2>
+            <p class="text-lg md:text-xl font-light italic opacity-80 max-w-2xl mt-2">
+              AI-powered personal health record management platform
+            </p>
+            <div class="mt-4 flex flex-wrap gap-4">
+              <a href="./sehty.html" class="inline-flex items-center gap-3 px-6 py-3 bg-fg-primary text-bg-primary rounded-full uppercase tracking-[0.2em] text-[10px] font-bold hover:scale-105 transition-transform duration-300">
+                View Case Study <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-4 h-64 md:h-80 overflow-hidden w-full rounded-xl">
+            <img src="./assets/Sehty/1788283983484.png" alt="Sehty" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700">
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="group block relative hover:bg-fg-primary hover:text-bg-primary transition-colors duration-500">
+        <div class="px-6 md:px-12 py-12 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+          <div class="md:col-span-8 flex flex-col gap-4">
+            <div class="flex items-center gap-4 text-[10px] tracking-[0.3em] opacity-40 uppercase">
+              <span>03</span>
+              <span>Brand Identity, UI/UX</span>
+              <span>2023</span>
+            </div>
+            <h2 class="text-4xl md:text-[60px] font-black tracking-tighter uppercase leading-none">
+              At3ema (أطعمة)
+            </h2>
+            <p class="text-lg md:text-xl font-light italic opacity-80 max-w-2xl mt-2">
+              Home-to-home food delivery platform
+            </p>
+            <div class="mt-4 flex flex-wrap gap-4">
+              <a href="./at3ema.html" class="inline-flex items-center gap-3 px-6 py-3 bg-fg-primary text-bg-primary rounded-full uppercase tracking-[0.2em] text-[10px] font-bold hover:scale-105 transition-transform duration-300">
+                View Case Study <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="https://at3ema-website.pages.dev/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 border border-current rounded-full uppercase tracking-[0.2em] text-[10px] font-bold hover:scale-105 transition-transform duration-300">
+                Live Demo <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-4 h-64 md:h-80 overflow-hidden w-full rounded-xl">
+            <img src="./assets/At3ema/Home to home,.png" alt="At3ema" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700">
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- About & CV Section -->
+    <section id="about" class="px-6 md:px-12 py-24 md:py-40 grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-border-subtle">
+      <div class="md:col-span-4">
+        <h3 class="text-[10px] tracking-[0.3em] opacity-40 uppercase mb-6">About & Focus</h3>
+      </div>
+      <div class="md:col-span-8">
+        <p class="text-2xl md:text-4xl leading-relaxed font-light mb-16 max-w-3xl">
+          I am Aser Ahmed Khaled, an Engineering student and digital creator based in Cairo, Egypt. With a background spanning UI/UX design, web development, and strategic project management, I focus on delivering impactful, human-centered solutions.
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-16">
+          
+          <!-- Column 1: Toolkit & Experience -->
+          <div>
+            <h4 class="text-[10px] tracking-[0.3em] opacity-40 uppercase mb-6 border-b border-border-subtle pb-4">Toolkit & Disciplines</h4>
+            <ul class="space-y-4 text-sm font-light uppercase tracking-widest mb-12">
+              <li class="flex items-center gap-3"><i data-lucide="pen-tool" class="w-4 h-4"></i> Figma, Adobe Express, Canva</li>
+              <li class="flex items-center gap-3"><i data-lucide="code" class="w-4 h-4"></i> React, Next.js, Tailwind CSS</li>
+              <li class="flex items-center gap-3"><i data-lucide="terminal" class="w-4 h-4"></i> HTML5, CSS3, JavaScript</li>
+              <li class="flex items-center gap-3 pt-4"><i data-lucide="layout" class="w-4 h-4"></i> UI/UX Design & Brand Identity</li>
+              <li class="flex items-center gap-3"><i data-lucide="users" class="w-4 h-4"></i> Project Management & Leadership</li>
+            </ul>
+            
+            <h4 class="text-[10px] tracking-[0.3em] opacity-40 uppercase mb-6 border-b border-border-subtle pb-4">Experience</h4>
+            <ul class="space-y-6 text-sm font-light">
+              <li>
+                <div class="flex justify-between uppercase tracking-widest mb-1">
+                  <span>InnovEgypt</span>
+                  <span class="opacity-40">2026</span>
+                </div>
+                <span class="opacity-70 block">Project Coordinator & Team Leader</span>
+              </li>
+              <li>
+                <div class="flex justify-between uppercase tracking-widest mb-1">
+                  <span>iSpark / Climate KIC</span>
+                  <span class="opacity-40">2026</span>
+                </div>
+                <span class="opacity-70 block">Climate Leaders Program</span>
+              </li>
+              <li>
+                <div class="flex justify-between uppercase tracking-widest mb-1">
+                  <span>Golden Years Foundation</span>
+                  <span class="opacity-40">2026</span>
+                </div>
+                <span class="opacity-70 block">Volunteer Coordinator</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Column 2: Education & Certifications -->
+          <div>
+            <h4 class="text-[10px] tracking-[0.3em] opacity-40 uppercase mb-6 border-b border-border-subtle pb-4">Education</h4>
+            <ul class="space-y-6 text-sm font-light mb-12">
+              <li>
+                <div class="flex justify-between uppercase tracking-widest mb-1">
+                  <span>MTI University (Cairo)</span>
+                  <span class="opacity-40">2025 - Pres</span>
+                </div>
+                <span class="opacity-70 block">Faculty of Engineering</span>
+              </li>
+            </ul>
+
+            <h4 class="text-[10px] tracking-[0.3em] opacity-40 uppercase mb-6 border-b border-border-subtle pb-4">Certifications & Training</h4>
+            <ul class="space-y-6 text-sm font-light mb-12">
+              <li>
+                <div class="flex justify-between uppercase tracking-widest mb-1">
+                  <span>UNDP Bootcamp</span>
+                  <span class="opacity-40">Feb 2026</span>
+                </div>
+                <span class="opacity-70 block">AI for sustainable development</span>
+              </li>
+              <li>
+                <div class="flex justify-between uppercase tracking-widest mb-1">
+                  <span>PMI Program (INJAZ)</span>
+                  <span class="opacity-40">Dec 2025</span>
+                </div>
+                <span class="opacity-70 block">Project Management Institute</span>
+              </li>
+              <li>
+                <div class="flex justify-between uppercase tracking-widest mb-1">
+                  <span>Digital Marketing</span>
+                  <span class="opacity-40">Jul 2024</span>
+                </div>
+                <span class="opacity-70 block">Maharat min Google</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="w-full transition-colors duration-500">
+    <div class="px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-border-subtle">
+      <div>
+        <h2 class="text-5xl md:text-[80px] font-black tracking-tighter mb-4 uppercase leading-[0.85]">Let's Talk</h2>
+        <a href="mailto:aserahmad2586@gmail.com" class="text-xl md:text-2xl opacity-70 font-light hover:opacity-100 transition-opacity duration-300 block w-max italic">
+          aserahmad2586@gmail.com
+        </a>
+      </div>
+    </div>
+    
+    <div class="px-6 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] tracking-widest opacity-40 uppercase">
+      <div>© 2026 ASER AHMED KHALED — Built for Creative Excellence</div>
+      <div class="flex gap-8">
+        <a href="https://www.linkedin.com/in/aser-ahmed-khaled/" target="_blank" rel="noopener noreferrer" class="hover:opacity-100 transition-opacity">LinkedIn</a>
+        <a href="https://www.behance.net/aserahmed23" target="_blank" rel="noopener noreferrer" class="hover:opacity-100 transition-opacity">Behance</a>
+        <a href="https://github.com/iOssme" target="_blank" rel="noopener noreferrer" class="hover:opacity-100 transition-opacity">GitHub</a>
+      </div>
+      <div>
+        <span id="local-time"></span> (UTC)
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Dark Mode Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Check system preference or localStorage
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      htmlElement.classList.add('dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      htmlElement.classList.toggle('dark');
+      const isDark = htmlElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Local Time Clock Logic
+    const timeElement = document.getElementById('local-time');
+    function updateClock() {
+      const now = new Date();
+      timeElement.textContent = `Local Time: ${now.toLocaleTimeString('en-US', { 
+        hour12: false, 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+      })}`;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
